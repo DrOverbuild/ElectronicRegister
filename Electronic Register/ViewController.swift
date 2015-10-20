@@ -10,11 +10,49 @@ import UIKit
 
 class ViewController: UIViewController {
 
-//	override func viewWillAppear(animated: Bool) {
-//		if let nc = self.navigationController{
-//			nc.navigationBarHidden = true
-//		}
-//	}
+	@IBAction func addExpense(sender: AnyObject) {
+		let transaction = Transaction()
+		transaction.amount = -3.422
+		transaction.forWhat = "Pizza"
+		transaction.toWhom = "Pizza Hut"
+		
+		var transactions = NSUserDefaults.standardUserDefaults().arrayForKey("transactions") as? [Transaction]
+		if transactions != nil{
+			transactions!.append(transaction)
+		}else{
+			transactions = [transaction]
+		}
+		
+		let myData = NSKeyedArchiver.archivedDataWithRootObject(transactions!)
+		NSUserDefaults.standardUserDefaults().setObject(myData, forKey: "transactions")
+		
+		print("Added expense with amount: \(transaction.amountString)")
+	}
+	
+	@IBAction func addIncome(sender: AnyObject) {
+		let transaction = Transaction()
+		transaction.amount = 7.422
+		transaction.forWhat = "Pizza"
+		transaction.toWhom = "Pizza Hut"
+		
+		var transactions = NSUserDefaults.standardUserDefaults().arrayForKey("transactions") as? [Transaction]
+		if transactions != nil{
+			transactions!.append(transaction)
+		}else{
+			transactions = [transaction]
+		}
+		
+		let myData = NSKeyedArchiver.archivedDataWithRootObject(transactions!)
+		NSUserDefaults.standardUserDefaults().setObject(myData, forKey: "transactions")
+		
+		print("Added income with amount: \(transaction.amountString)")
+	}
+	
+	override func viewWillAppear(animated: Bool) {
+		if let nc = self.navigationController{
+			nc.navigationBarHidden = true
+		}
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

@@ -9,36 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-	@IBAction func addExpense(sender: AnyObject) {
-		let transaction = Transaction()
-		transaction.amount = -3.422
-		transaction.forWhat = "Pizza"
-		transaction.toWhom = "Pizza Hut"
-		
-		var trans = Transaction.getTransactionsFromUserdefaults()
-		
-		trans = [transaction] + trans
-		
-		Transaction.setTransactionsFromUserDefaults(trans)
-	
-		print("Added expense with amount: \(transaction.amountString)")
-	}
-	
-	@IBAction func addIncome(sender: AnyObject) {
-		let transaction = Transaction()
-		transaction.amount = 45.422
-		transaction.forWhat = "Pizza"
-		transaction.toWhom = "Pizza Hut"
-		
-		var trans = Transaction.getTransactionsFromUserdefaults()
-		
-		trans = [transaction] + trans
-		
-		Transaction.setTransactionsFromUserDefaults(trans)
-		
-		print("Added income with amount: \(transaction.amountString)")
-	}
 	
 	override func viewWillAppear(animated: Bool) {
 		if let nc = self.navigationController{
@@ -56,6 +26,14 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
-
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if let id = segue.identifier{
+			if id == "add transaction"{
+				if let atnc = segue.destinationViewController as? AddTransactionNavigationController{
+					atnc.previousViewController = self
+				}
+			}
+		}
+	}
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A4102F291BD5A6BE00E1D695 /* OurSVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4102F281BD5A6BE00E1D695 /* OurSVCViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A42C3E601BD73D12006827E7 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42C3E5F1BD73D12006827E7 /* AddTransactionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A42C3E621BD7466E006827E7 /* AddTransactionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42C3E611BD7466E006827E7 /* AddTransactionNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 		A48514261BD428A100F1D088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48514251BD428A100F1D088 /* AppDelegate.swift */; };
 		A48514281BD428A100F1D088 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48514271BD428A100F1D088 /* ViewController.swift */; };
 		A485142B1BD428A100F1D088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48514291BD428A100F1D088 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		A4102F281BD5A6BE00E1D695 /* OurSVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurSVCViewController.swift; sourceTree = "<group>"; };
+		A42C3E5F1BD73D12006827E7 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		A42C3E611BD7466E006827E7 /* AddTransactionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionNavigationController.swift; sourceTree = "<group>"; };
 		A48514221BD428A100F1D088 /* Electronic Register.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electronic Register.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48514251BD428A100F1D088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A48514271BD428A100F1D088 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				A48514271BD428A100F1D088 /* ViewController.swift */,
 				A4102F281BD5A6BE00E1D695 /* OurSVCViewController.swift */,
 				A4F978E01BD5DD870051FBF0 /* TransactionsViewController.swift */,
+				A42C3E5F1BD73D12006827E7 /* AddTransactionViewController.swift */,
+				A42C3E611BD7466E006827E7 /* AddTransactionNavigationController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -163,8 +169,10 @@
 				A48514281BD428A100F1D088 /* ViewController.swift in Sources */,
 				A48514261BD428A100F1D088 /* AppDelegate.swift in Sources */,
 				A4F978E11BD5DD870051FBF0 /* TransactionsViewController.swift in Sources */,
+				A42C3E601BD73D12006827E7 /* AddTransactionViewController.swift in Sources */,
 				A4102F291BD5A6BE00E1D695 /* OurSVCViewController.swift in Sources */,
 				A4F978E51BD5E68C0051FBF0 /* Transaction.swift in Sources */,
+				A42C3E621BD7466E006827E7 /* AddTransactionNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64Z-Fz-lDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539.5" y="2616"/>
+            <point key="canvasLocation" x="-478.5" y="1212"/>
         </scene>
         <!--Electronic Register-->
         <scene sceneID="tne-QT-ifu">
@@ -157,8 +157,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="addExpense:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFj-nZ-omQ"/>
-                                    <segue destination="Rgn-ZX-055" kind="popoverPresentation" popoverAnchorView="ErW-1e-xWq" id="3l0-Mt-H7I">
+                                    <segue destination="0if-rg-qIj" kind="popoverPresentation" identifier="add transaction" popoverAnchorView="ErW-1e-xWq" id="vl6-0g-97e">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -184,8 +183,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="addIncome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xgA-4x-Ym0"/>
-                                    <segue destination="zmg-1X-u3R" kind="popoverPresentation" popoverAnchorView="864-Mn-mwd" id="vnf-bF-7gu">
+                                    <segue destination="Xa7-to-AJV" kind="popoverPresentation" identifier="add transaction" popoverAnchorView="864-Mn-mwd" id="Y8j-7K-2Kh">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -391,15 +389,16 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Electronic Register" id="pGM-v3-Nff"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3286.5" y="1874"/>
+            <point key="canvasLocation" x="268.5" y="470"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Income-->
         <scene sceneID="OK9-fM-pcc">
             <objects>
-                <viewController id="zmg-1X-u3R" sceneMemberID="viewController">
+                <viewController id="zmg-1X-u3R" customClass="AddTransactionViewController" customModule="Electronic_Register" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cNW-ID-W1p"/>
                         <viewControllerLayoutGuide type="bottom" id="dp4-Rd-PdO"/>
@@ -407,48 +406,121 @@
                     <view key="view" contentMode="scaleToFill" id="1Vf-rS-SZW">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksc-lv-zRT">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mp1-Yf-0TW">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="For" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oWu-ZL-atk">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5X1-ve-9qI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="M7Q-Ej-WPx"/>
+                                    <constraint firstAttribute="height" constant="40" id="rNs-fo-Gte"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Add Income" backgroundImage="button background">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M7Q-Ej-WPx"/>
+                                        <exclude reference="rNs-fo-Gte"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="M7Q-Ej-WPx"/>
+                                        <include reference="rNs-fo-Gte"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ksc-lv-zRT" firstAttribute="centerX" secondItem="1Vf-rS-SZW" secondAttribute="centerX" id="Tai-b7-xmY"/>
-                            <constraint firstItem="ksc-lv-zRT" firstAttribute="centerY" secondItem="1Vf-rS-SZW" secondAttribute="centerY" id="s38-p9-0Ej"/>
+                            <constraint firstItem="oWu-ZL-atk" firstAttribute="leading" secondItem="1Vf-rS-SZW" secondAttribute="leadingMargin" id="3jK-Ru-4Aa"/>
+                            <constraint firstItem="mp1-Yf-0TW" firstAttribute="top" secondItem="cNW-ID-W1p" secondAttribute="bottom" constant="8" id="Iju-xy-Je2"/>
+                            <constraint firstItem="mp1-Yf-0TW" firstAttribute="trailing" secondItem="1Vf-rS-SZW" secondAttribute="trailingMargin" id="JCs-3L-pdw"/>
+                            <constraint firstItem="5X1-ve-9qI" firstAttribute="top" secondItem="oWu-ZL-atk" secondAttribute="bottom" constant="8" id="Mqv-jK-4Hu"/>
+                            <constraint firstItem="oWu-ZL-atk" firstAttribute="top" secondItem="mp1-Yf-0TW" secondAttribute="bottom" constant="8" id="PAc-b4-5I5"/>
+                            <constraint firstItem="oWu-ZL-atk" firstAttribute="trailing" secondItem="1Vf-rS-SZW" secondAttribute="trailingMargin" id="asJ-5W-389"/>
+                            <constraint firstItem="5X1-ve-9qI" firstAttribute="trailing" secondItem="1Vf-rS-SZW" secondAttribute="trailingMargin" id="bb2-jK-7Lg"/>
+                            <constraint firstItem="5X1-ve-9qI" firstAttribute="leading" secondItem="1Vf-rS-SZW" secondAttribute="leadingMargin" id="nx7-hs-JCt"/>
+                            <constraint firstItem="mp1-Yf-0TW" firstAttribute="leading" secondItem="1Vf-rS-SZW" secondAttribute="leadingMargin" id="wu5-zl-Daz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="ksc-lv-zRT"/>
+                                <exclude reference="mp1-Yf-0TW"/>
+                                <exclude reference="oWu-ZL-atk"/>
+                                <exclude reference="5X1-ve-9qI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Tai-b7-xmY"/>
-                                <exclude reference="s38-p9-0Ej"/>
+                                <exclude reference="Iju-xy-Je2"/>
+                                <exclude reference="JCs-3L-pdw"/>
+                                <exclude reference="wu5-zl-Daz"/>
+                                <exclude reference="3jK-Ru-4Aa"/>
+                                <exclude reference="PAc-b4-5I5"/>
+                                <exclude reference="asJ-5W-389"/>
+                                <exclude reference="Mqv-jK-4Hu"/>
+                                <exclude reference="bb2-jK-7Lg"/>
+                                <exclude reference="nx7-hs-JCt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="ksc-lv-zRT"/>
+                                <include reference="mp1-Yf-0TW"/>
+                                <include reference="oWu-ZL-atk"/>
+                                <include reference="5X1-ve-9qI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Tai-b7-xmY"/>
-                                <include reference="s38-p9-0Ej"/>
+                                <include reference="Iju-xy-Je2"/>
+                                <include reference="JCs-3L-pdw"/>
+                                <include reference="wu5-zl-Daz"/>
+                                <include reference="3jK-Ru-4Aa"/>
+                                <include reference="PAc-b4-5I5"/>
+                                <include reference="asJ-5W-389"/>
+                                <include reference="Mqv-jK-4Hu"/>
+                                <include reference="bb2-jK-7Lg"/>
+                                <include reference="nx7-hs-JCt"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="66a-1S-5YM" appends="YES" id="8jR-m7-c6y"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Income" id="XVM-Lf-QMg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="duM-EN-83x">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="zmg-1X-u3R" id="aT3-ko-tW0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hO1-4O-Wgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="66a-1S-5YM">
+                    <connections>
+                        <action selector="onTap:" destination="zmg-1X-u3R" id="sOa-9F-hZl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4054.5" y="1874"/>
+            <point key="canvasLocation" x="1647" y="470"/>
         </scene>
         <!--OurSVC View Controller-->
         <scene sceneID="DV9-AR-lSw">
             <objects>
                 <splitViewController id="0EB-ot-a8F" customClass="OurSVCViewController" customModule="Electronic_Register" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
                         <segue destination="NxW-cH-fSQ" kind="relationship" relationship="masterViewController" id="b2b-LH-gjB"/>
                         <segue destination="tlv-Z8-LWe" kind="relationship" relationship="detailViewController" id="VM4-7n-JHU"/>
@@ -456,13 +528,14 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZW-xg-mhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539.5" y="1129"/>
+            <point key="canvasLocation" x="-478.5" y="-275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aeE-qP-6Nb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NxW-cH-fSQ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DPm-oR-a7u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -475,12 +548,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcy-aj-ULi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3286.5" y="1129"/>
+            <point key="canvasLocation" x="268.5" y="-275"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Expense-->
         <scene sceneID="cfm-Gg-XXv">
             <objects>
-                <viewController id="Rgn-ZX-055" sceneMemberID="viewController">
+                <viewController id="Rgn-ZX-055" customClass="AddTransactionViewController" customModule="Electronic_Register" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cUA-iZ-79Y"/>
                         <viewControllerLayoutGuide type="bottom" id="7em-By-QdQ"/>
@@ -488,56 +561,134 @@
                     <view key="view" contentMode="scaleToFill" id="3ms-sS-vaB">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pon-Gi-pmS">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ecj-nw-f98">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChJ-Ra-fKc">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="reF-yT-L8Q">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="For" textAlignment="center" minimumFontSize="18" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-BP-FR8">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvO-Zi-1SU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Cancel"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Hv9-sv-H6k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Add Expense" backgroundImage="button background">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hv9-sv-H6k"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Hv9-sv-H6k"/>
+                                    </mask>
+                                </variation>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="pon-Gi-pmS" firstAttribute="centerX" secondItem="3ms-sS-vaB" secondAttribute="centerX" id="B49-cO-YFL"/>
-                            <constraint firstItem="ChJ-Ra-fKc" firstAttribute="centerX" secondItem="3ms-sS-vaB" secondAttribute="centerX" id="WoZ-Ng-5P4"/>
-                            <constraint firstItem="pon-Gi-pmS" firstAttribute="centerY" secondItem="3ms-sS-vaB" secondAttribute="centerY" id="aj5-oV-FWl"/>
-                            <constraint firstItem="7em-By-QdQ" firstAttribute="top" secondItem="ChJ-Ra-fKc" secondAttribute="bottom" constant="20" id="jvd-W0-Yqf"/>
+                            <constraint firstItem="reF-yT-L8Q" firstAttribute="trailing" secondItem="3ms-sS-vaB" secondAttribute="trailingMargin" id="1Ug-8s-Ir2"/>
+                            <constraint firstItem="mvO-Zi-1SU" firstAttribute="leading" secondItem="3ms-sS-vaB" secondAttribute="leadingMargin" id="7sM-8L-rjv"/>
+                            <constraint firstItem="7u9-BP-FR8" firstAttribute="leading" secondItem="3ms-sS-vaB" secondAttribute="leadingMargin" id="Hij-a8-ypy"/>
+                            <constraint firstItem="mvO-Zi-1SU" firstAttribute="top" secondItem="7u9-BP-FR8" secondAttribute="bottom" constant="8" id="QRn-JK-rTd"/>
+                            <constraint firstItem="Ecj-nw-f98" firstAttribute="leading" secondItem="3ms-sS-vaB" secondAttribute="leadingMargin" id="TKb-xn-ZuW"/>
+                            <constraint firstItem="reF-yT-L8Q" firstAttribute="top" secondItem="Ecj-nw-f98" secondAttribute="bottom" constant="8" id="TZk-KR-VNn"/>
+                            <constraint firstItem="Ecj-nw-f98" firstAttribute="trailing" secondItem="3ms-sS-vaB" secondAttribute="trailingMargin" id="WcI-6M-E6b"/>
+                            <constraint firstItem="mvO-Zi-1SU" firstAttribute="trailing" secondItem="3ms-sS-vaB" secondAttribute="trailingMargin" id="Xrp-hD-Fmj"/>
+                            <constraint firstItem="reF-yT-L8Q" firstAttribute="leading" secondItem="3ms-sS-vaB" secondAttribute="leadingMargin" id="aGV-sG-ZiN"/>
+                            <constraint firstItem="Ecj-nw-f98" firstAttribute="top" secondItem="cUA-iZ-79Y" secondAttribute="bottom" constant="8" id="cEy-sI-oIa"/>
+                            <constraint firstItem="7u9-BP-FR8" firstAttribute="trailing" secondItem="3ms-sS-vaB" secondAttribute="trailingMargin" id="hZN-xy-EFJ"/>
+                            <constraint firstItem="7u9-BP-FR8" firstAttribute="top" secondItem="reF-yT-L8Q" secondAttribute="bottom" constant="8" id="w7Y-MZ-VWs"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="pon-Gi-pmS"/>
-                                <exclude reference="ChJ-Ra-fKc"/>
+                                <exclude reference="Ecj-nw-f98"/>
+                                <exclude reference="reF-yT-L8Q"/>
+                                <exclude reference="7u9-BP-FR8"/>
+                                <exclude reference="mvO-Zi-1SU"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="B49-cO-YFL"/>
-                                <exclude reference="aj5-oV-FWl"/>
-                                <exclude reference="WoZ-Ng-5P4"/>
-                                <exclude reference="jvd-W0-Yqf"/>
+                                <exclude reference="TKb-xn-ZuW"/>
+                                <exclude reference="WcI-6M-E6b"/>
+                                <exclude reference="cEy-sI-oIa"/>
+                                <exclude reference="1Ug-8s-Ir2"/>
+                                <exclude reference="TZk-KR-VNn"/>
+                                <exclude reference="aGV-sG-ZiN"/>
+                                <exclude reference="Hij-a8-ypy"/>
+                                <exclude reference="hZN-xy-EFJ"/>
+                                <exclude reference="w7Y-MZ-VWs"/>
+                                <exclude reference="7sM-8L-rjv"/>
+                                <exclude reference="QRn-JK-rTd"/>
+                                <exclude reference="Xrp-hD-Fmj"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="pon-Gi-pmS"/>
-                                <include reference="ChJ-Ra-fKc"/>
+                                <include reference="Ecj-nw-f98"/>
+                                <include reference="reF-yT-L8Q"/>
+                                <include reference="7u9-BP-FR8"/>
+                                <include reference="mvO-Zi-1SU"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="B49-cO-YFL"/>
-                                <include reference="aj5-oV-FWl"/>
-                                <include reference="WoZ-Ng-5P4"/>
-                                <include reference="jvd-W0-Yqf"/>
+                                <include reference="TKb-xn-ZuW"/>
+                                <include reference="WcI-6M-E6b"/>
+                                <include reference="cEy-sI-oIa"/>
+                                <include reference="1Ug-8s-Ir2"/>
+                                <include reference="TZk-KR-VNn"/>
+                                <include reference="aGV-sG-ZiN"/>
+                                <include reference="Hij-a8-ypy"/>
+                                <include reference="hZN-xy-EFJ"/>
+                                <include reference="w7Y-MZ-VWs"/>
+                                <include reference="7sM-8L-rjv"/>
+                                <include reference="QRn-JK-rTd"/>
+                                <include reference="Xrp-hD-Fmj"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Qyo-Gh-sEa" appends="YES" id="Nwa-rt-MH6"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Expense" id="ede-Zi-IHP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="jgJ-57-Coj">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="Rgn-ZX-055" id="oRF-fP-02S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="Ecj-nw-f98" id="amv-LI-NtZ"/>
+                        <outlet property="forTextField" destination="7u9-BP-FR8" id="OLP-yR-9ki"/>
+                        <outlet property="toTextField" destination="reF-yT-L8Q" id="HcJ-ld-0Ma"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eq9-Yi-c5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="Qyo-Gh-sEa">
+                    <connections>
+                        <action selector="onTap:" destination="Rgn-ZX-055" id="W3m-W7-Yf9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4054.5" y="1129"/>
+            <point key="canvasLocation" x="1647" y="-275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c7y-av-sUg">
@@ -556,7 +707,55 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHf-av-POz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539.5" y="1874"/>
+            <point key="canvasLocation" x="-478.5" y="470"/>
+        </scene>
+        <!--Add Transaction Navigation Controller-->
+        <scene sceneID="WBC-gD-mNw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0if-rg-qIj" customClass="AddTransactionNavigationController" customModule="Electronic_Register" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ovu-eH-dsz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rgn-ZX-055" kind="relationship" relationship="rootViewController" id="kjM-Vn-mSJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIA-z4-vjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="-275"/>
+        </scene>
+        <!--Add Transaction Navigation Controller-->
+        <scene sceneID="Htq-8H-JVS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xa7-to-AJV" customClass="AddTransactionNavigationController" customModule="Electronic_Register" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="eDn-BJ-oKu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zmg-1X-u3R" kind="relationship" relationship="rootViewController" id="lIF-ct-plp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j92-t8-6r8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="470"/>
         </scene>
     </scenes>
     <resources>

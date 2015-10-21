@@ -158,6 +158,9 @@
                                 </variation>
                                 <connections>
                                     <action selector="addExpense:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFj-nZ-omQ"/>
+                                    <segue destination="Rgn-ZX-055" kind="popoverPresentation" popoverAnchorView="ErW-1e-xWq" id="3l0-Mt-H7I">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="864-Mn-mwd">
@@ -182,6 +185,9 @@
                                 </variation>
                                 <connections>
                                     <action selector="addIncome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xgA-4x-Ym0"/>
+                                    <segue destination="zmg-1X-u3R" kind="popoverPresentation" popoverAnchorView="864-Mn-mwd" id="vnf-bF-7gu">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8b-NY-nvj">
@@ -390,6 +396,55 @@
             </objects>
             <point key="canvasLocation" x="3286.5" y="1874"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="OK9-fM-pcc">
+            <objects>
+                <viewController id="zmg-1X-u3R" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cNW-ID-W1p"/>
+                        <viewControllerLayoutGuide type="bottom" id="dp4-Rd-PdO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Vf-rS-SZW">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksc-lv-zRT">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ksc-lv-zRT" firstAttribute="centerX" secondItem="1Vf-rS-SZW" secondAttribute="centerX" id="Tai-b7-xmY"/>
+                            <constraint firstItem="ksc-lv-zRT" firstAttribute="centerY" secondItem="1Vf-rS-SZW" secondAttribute="centerY" id="s38-p9-0Ej"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ksc-lv-zRT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Tai-b7-xmY"/>
+                                <exclude reference="s38-p9-0Ej"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ksc-lv-zRT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Tai-b7-xmY"/>
+                                <include reference="s38-p9-0Ej"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hO1-4O-Wgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4054.5" y="1874"/>
+        </scene>
         <!--OurSVC View Controller-->
         <scene sceneID="DV9-AR-lSw">
             <objects>
@@ -421,6 +476,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcy-aj-ULi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3286.5" y="1129"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cfm-Gg-XXv">
+            <objects>
+                <viewController id="Rgn-ZX-055" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cUA-iZ-79Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="7em-By-QdQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3ms-sS-vaB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pon-Gi-pmS">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChJ-Ra-fKc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pon-Gi-pmS" firstAttribute="centerX" secondItem="3ms-sS-vaB" secondAttribute="centerX" id="B49-cO-YFL"/>
+                            <constraint firstItem="ChJ-Ra-fKc" firstAttribute="centerX" secondItem="3ms-sS-vaB" secondAttribute="centerX" id="WoZ-Ng-5P4"/>
+                            <constraint firstItem="pon-Gi-pmS" firstAttribute="centerY" secondItem="3ms-sS-vaB" secondAttribute="centerY" id="aj5-oV-FWl"/>
+                            <constraint firstItem="7em-By-QdQ" firstAttribute="top" secondItem="ChJ-Ra-fKc" secondAttribute="bottom" constant="20" id="jvd-W0-Yqf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pon-Gi-pmS"/>
+                                <exclude reference="ChJ-Ra-fKc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="B49-cO-YFL"/>
+                                <exclude reference="aj5-oV-FWl"/>
+                                <exclude reference="WoZ-Ng-5P4"/>
+                                <exclude reference="jvd-W0-Yqf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pon-Gi-pmS"/>
+                                <include reference="ChJ-Ra-fKc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="B49-cO-YFL"/>
+                                <include reference="aj5-oV-FWl"/>
+                                <include reference="WoZ-Ng-5P4"/>
+                                <include reference="jvd-W0-Yqf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eq9-Yi-c5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4054.5" y="1129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c7y-av-sUg">

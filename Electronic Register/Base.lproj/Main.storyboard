@@ -15,6 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="49a-F1-AVQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bJq-5y-rOS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NAF-hA-fs5">

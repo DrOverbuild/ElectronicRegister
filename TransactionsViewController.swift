@@ -14,17 +14,7 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
 	
 	@IBOutlet var tableView: UITableView! {
 		didSet {
-			let data = NSUserDefaults.standardUserDefaults().objectForKey("transactions") as! NSData
-			let trans = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Transaction]
-			//if let trans = NSUserDefaults.standardUserDefaults().arrayForKey("transactions") as? [Transaction] {
-			transactions = trans
-//			}else{
-//				let trans = Transaction()
-//				trans.amount = 5.21744
-//				trans.toWhom = "Kroger"
-//				trans.forWhat = "Everything"
-//				transactions = [trans]
-//			}
+			transactions = Transaction.getTransactionsFromUserdefaults()
 		}
 	}
 

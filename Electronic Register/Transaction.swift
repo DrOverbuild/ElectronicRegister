@@ -54,4 +54,17 @@ class Transaction: NSObject, NSCoding {
 		aCoder.encodeObject(forWhat, forKey: "forWhat")
 		aCoder.encodeObject(date, forKey: "date")
 	}
+	
+	class func getTransactionsFromUserdefaults() -> [Transaction]{
+		if let data = NSUserDefaults.standardUserDefaults().objectForKey("transactions") as? NSData {
+			return NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Transaction]
+		}else{
+			return []
+		}
+	}
+	
+	class func setTransactionsFromUserDefaults(transactions: [Transaction]){
+		let myData = NSKeyedArchiver.archivedDataWithRootObject(transactions)
+		NSUserDefaults.standardUserDefaults().setObject(myData, forKey: "transactions")
+	}
 }

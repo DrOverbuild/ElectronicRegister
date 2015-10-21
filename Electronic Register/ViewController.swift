@@ -16,19 +16,12 @@ class ViewController: UIViewController {
 		transaction.forWhat = "Pizza"
 		transaction.toWhom = "Pizza Hut"
 		
-		let data = NSUserDefaults.standardUserDefaults().objectForKey("transactions") as! NSData
-		var transactions = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Transaction]
+		var trans = Transaction.getTransactionsFromUserdefaults()
 		
-		//		var transactions = NSUserDefaults.standardUserDefaults().arrayForKey("transactions") as? [Transaction]
-		//		if transactions != nil{
-		transactions.append(transaction)
-		//		}else{
-		//			transactions = [transaction]
-		//		}
+		trans = [transaction] + trans
 		
-		let myData = NSKeyedArchiver.archivedDataWithRootObject(transactions)
-		NSUserDefaults.standardUserDefaults().setObject(myData, forKey: "transactions")
-		
+		Transaction.setTransactionsFromUserDefaults(trans)
+	
 		print("Added expense with amount: \(transaction.amountString)")
 	}
 	
@@ -38,18 +31,11 @@ class ViewController: UIViewController {
 		transaction.forWhat = "Pizza"
 		transaction.toWhom = "Pizza Hut"
 		
-		let data = NSUserDefaults.standardUserDefaults().objectForKey("transactions") as! NSData
-		var transactions = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Transaction]
+		var trans = Transaction.getTransactionsFromUserdefaults()
 		
-		//		var transactions = NSUserDefaults.standardUserDefaults().arrayForKey("transactions") as? [Transaction]
-		//		if transactions != nil{
-		transactions.append(transaction)
-		//		}else{
-		//			transactions = [transaction]
-		//		}
+		trans = [transaction] + trans
 		
-		let myData = NSKeyedArchiver.archivedDataWithRootObject(transactions)
-		NSUserDefaults.standardUserDefaults().setObject(myData, forKey: "transactions")
+		Transaction.setTransactionsFromUserDefaults(trans)
 		
 		print("Added income with amount: \(transaction.amountString)")
 	}

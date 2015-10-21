@@ -8,40 +8,48 @@
 
 import UIKit
 
-class TransactionsViewController: UITableViewController{
+class TransactionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
 	var transactions: [Transaction] = []
 	
-//	@IBOutlet var tableView: UITableView! {
-//		didSet {
-//			if let trans = NSUserDefaults.standardUserDefaults().arrayForKey("transactions") as? [Transaction] {
-//				transactions = trans
-//			}
-//		}
-//	}
-	
-	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+	@IBOutlet var tableView: UITableView! {
+		didSet {
+			if let trans = NSUserDefaults.standardUserDefaults().arrayForKey("transactions") as? [Transaction] {
+				transactions = trans
+			}else{
+				let trans = Transaction()
+				trans.amount = 5.21744
+				trans.toWhom = "Kroger"
+				trans.forWhat = "Everything"
+				transactions = [trans]
+			}
+		}
+	}
+
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		// Insert code here when user taps cell.
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
 	
 	
 	
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return transactions.count
 		//return transactions.couoverride nt
 	}
 	
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = self.tableView.dequeueReusableCellWithIdentifier("cell")!
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "cell")
 		
 		if cell.textLabel != nil {
-			cell.textLabel!.text = "hello"//transactions[indexPath.row].amountString
+			cell.textLabel!.text = transactions[indexPath.row].amountString
 		}
 		
 		if cell.detailTextLabel != nil {
-			cell.detailTextLabel!.text = "hello"//transactions[indexPath.row].toWhom
+			cell.detailTextLabel!.text = transactions[indexPath.row].toWhom
 		}
 		print("tableView cell content customized.")
+		
 		return cell
 	}
 	
@@ -53,6 +61,8 @@ class TransactionsViewController: UITableViewController{
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		//self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+		title = "Transactions"
+		self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+		//self.tableView.separatorInset = UIEdgeInsetsZero
 	}
 }

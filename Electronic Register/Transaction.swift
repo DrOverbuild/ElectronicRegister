@@ -16,6 +16,12 @@ class Transaction: NSObject, NSCoding {
 	var forWhat: String = ""
 	var date: NSDate = NSDate()
 	
+	override var description: String {
+		get {
+			return "Transaction: \(amountString), to \(toWhom), for \(forWhat)"
+		}
+	}
+	
 	var amountString: String {
 		get {
 			let formatter = NSNumberFormatter()
@@ -27,6 +33,12 @@ class Transaction: NSObject, NSCoding {
 				return "$0.00"
 			}
 		}
+	}
+	
+	func addToDatabase(){
+		var transactions = Transaction.getTransactionsFromUserdefaults()
+		transactions = [self] + transactions
+		Transaction.setTransactionsFromUserDefaults(transactions)
 	}
 	
 	override init(){ super.init()}

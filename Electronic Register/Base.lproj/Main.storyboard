@@ -442,6 +442,9 @@
                                         <include reference="rNs-fo-Gte"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onAddTransaction:" destination="zmg-1X-u3R" eventType="touchUpInside" id="eA4-5W-pIF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -605,6 +608,9 @@
                                         <include reference="Hv9-sv-H6k"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onAddTransaction:" destination="Rgn-ZX-055" eventType="touchUpInside" id="PpM-Aa-JBA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

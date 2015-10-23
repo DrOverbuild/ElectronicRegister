@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4102F291BD5A6BE00E1D695 /* OurSVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4102F281BD5A6BE00E1D695 /* OurSVCViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A42C3E601BD73D12006827E7 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42C3E5F1BD73D12006827E7 /* AddTransactionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A42C3E621BD7466E006827E7 /* AddTransactionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42C3E611BD7466E006827E7 /* AddTransactionNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
+		A4102F291BD5A6BE00E1D695 /* OurSVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4102F281BD5A6BE00E1D695 /* OurSVCViewController.swift */; };
+		A42C3E601BD73D12006827E7 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42C3E5F1BD73D12006827E7 /* AddTransactionViewController.swift */; };
+		A42C3E621BD7466E006827E7 /* AddTransactionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42C3E611BD7466E006827E7 /* AddTransactionNavigationController.swift */; };
 		A48514261BD428A100F1D088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48514251BD428A100F1D088 /* AppDelegate.swift */; };
 		A48514281BD428A100F1D088 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48514271BD428A100F1D088 /* ViewController.swift */; };
 		A485142B1BD428A100F1D088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48514291BD428A100F1D088 /* Main.storyboard */; };
 		A485142D1BD428A200F1D088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A485142C1BD428A200F1D088 /* Assets.xcassets */; };
 		A48514301BD428A200F1D088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A485142E1BD428A200F1D088 /* LaunchScreen.storyboard */; };
-		A4F978E11BD5DD870051FBF0 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F978E01BD5DD870051FBF0 /* TransactionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A4F978E51BD5E68C0051FBF0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F978E41BD5E68C0051FBF0 /* Transaction.swift */; settings = {ASSET_TAGS = (); }; };
+		A4AF6F071BD9C07200C084B4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF6F061BD9C07200C084B4 /* Account.swift */; };
+		A4F978E11BD5DD870051FBF0 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F978E01BD5DD870051FBF0 /* TransactionsViewController.swift */; };
+		A4F978E51BD5E68C0051FBF0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F978E41BD5E68C0051FBF0 /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A485142C1BD428A200F1D088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A485142F1BD428A200F1D088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A48514311BD428A200F1D088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4AF6F061BD9C07200C084B4 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		A4F978E01BD5DD870051FBF0 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionsViewController.swift; path = ../TransactionsViewController.swift; sourceTree = "<group>"; };
 		A4F978E41BD5E68C0051FBF0 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				A48514251BD428A100F1D088 /* AppDelegate.swift */,
 				A48514291BD428A100F1D088 /* Main.storyboard */,
 				A4F978E41BD5E68C0051FBF0 /* Transaction.swift */,
+				A4AF6F061BD9C07200C084B4 /* Account.swift */,
 				A4F978E21BD5E5DB0051FBF0 /* View Controllers */,
 				A4F978E31BD5E5EC0051FBF0 /* Assets */,
 			);
@@ -171,6 +174,7 @@
 				A4F978E11BD5DD870051FBF0 /* TransactionsViewController.swift in Sources */,
 				A42C3E601BD73D12006827E7 /* AddTransactionViewController.swift in Sources */,
 				A4102F291BD5A6BE00E1D695 /* OurSVCViewController.swift in Sources */,
+				A4AF6F071BD9C07200C084B4 /* Account.swift in Sources */,
 				A4F978E51BD5E68C0051FBF0 /* Transaction.swift in Sources */,
 				A42C3E621BD7466E006827E7 /* AddTransactionNavigationController.swift in Sources */,
 			);

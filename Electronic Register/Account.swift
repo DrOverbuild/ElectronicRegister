@@ -10,25 +10,27 @@ import UIKit
 
 class Account: NSObject {
 
-	var balance: Double {
+	static var balance: Double {
 		get {
 			return NSUserDefaults.standardUserDefaults().doubleForKey("account.balance") ?? 0.0
 		}
 		set {
 			NSUserDefaults.standardUserDefaults().setDouble(newValue, forKey: "account.balance")
+			NSUserDefaults.standardUserDefaults().setObject("\(newValue)", forKey: "account.balanceStr")
 		}
 	}
 	
-	var tithesDue: Double {
+	static var tithesDue: Double {
 		get {
 			return NSUserDefaults.standardUserDefaults().doubleForKey("account.tithes") ?? 0.0
 		}
 		set {
 			NSUserDefaults.standardUserDefaults().setDouble(newValue, forKey: "account.tithes")
+			NSUserDefaults.standardUserDefaults().setObject("\(newValue)", forKey: "account.tithesStr")
 		}
 	}
 	
-	var totalExpense: Double{
+	static var totalExpense: Double{
 		get {
 			let transactions = Transaction.getTransactionsFromUserdefaults()
 			var total: Double = 0.0
@@ -41,7 +43,7 @@ class Account: NSObject {
 		}
 	}
 	
-	var totalIncome: Double{
+	static var totalIncome: Double{
 		get {
 			let transactions = Transaction.getTransactionsFromUserdefaults()
 			var total: Double = 0.0

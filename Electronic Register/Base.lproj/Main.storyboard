@@ -390,6 +390,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Electronic Register" id="pGM-v3-Nff"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <connections>
+                        <outlet property="balanceValueLabel" destination="DoF-wf-UR3" id="Fpb-B6-eD7"/>
+                        <outlet property="tithesDueValueLabel" destination="UtM-Zv-MCK" id="2CQ-46-f0R"/>
+                        <outlet property="totalExpensesValueLabel" destination="GbB-ip-pcz" id="pTM-lW-kG4"/>
+                        <outlet property="totalIncomeValueLabel" destination="mpr-fh-AaR" id="Y70-zh-sc7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

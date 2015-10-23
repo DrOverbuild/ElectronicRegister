@@ -10,10 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 	
+	@IBOutlet weak var balanceValueLabel: UILabel!
+	@IBOutlet weak var totalIncomeValueLabel: UILabel!
+	@IBOutlet weak var totalExpensesValueLabel: UILabel!
+	@IBOutlet weak var tithesDueValueLabel: UILabel!
+	
 	override func viewWillAppear(animated: Bool) {
 		if let nc = self.navigationController{
 			nc.navigationBarHidden = true
 		}
+		
+		balanceValueLabel.text = Account.balance.currencyString
+		totalExpensesValueLabel.text = Account.totalExpense.currencyString
+		totalIncomeValueLabel.text = Account.totalIncome.currencyString
+		tithesDueValueLabel.text = Account.tithesDue.currencyString
+		
 	}
 	
 	override func viewDidLoad() {

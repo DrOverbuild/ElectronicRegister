@@ -35,6 +35,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func applicationDidBecomeActive(application: UIApplication) {
 		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+		
+		if let amount = Double((NSUserDefaults.standardUserDefaults().objectForKey("account.balanceStr") as? String) ?? ""){
+			NSUserDefaults.standardUserDefaults().setDouble(amount, forKey: "account.balance")
+		}
+		
+		if let amount = Double((NSUserDefaults.standardUserDefaults().objectForKey("account.tithesStr") as? String) ?? ""){
+			NSUserDefaults.standardUserDefaults().setDouble(amount, forKey: "account.tithes")
+		}
+		
+		if NSUserDefaults.standardUserDefaults().boolForKey("resetAllData"){
+			NSUserDefaults.standardUserDefaults().setDouble(0.0, forKey: "account.balance")
+			NSUserDefaults.standardUserDefaults().setDouble(0.0, forKey: "account.tithes")
+			NSUserDefaults.standardUserDefaults().setObject("0.00", forKey: "account.balanceStr")
+			NSUserDefaults.standardUserDefaults().setObject("0.00", forKey: "account.tithesStr")
+			NSUserDefaults.standardUserDefaults().setBool(false, forKey: "resetAllData")
+			
+			Transaction.setTransactionsFromUserDefaults([])
+		}
 	}
 
 	func applicationWillTerminate(application: UIApplication) {

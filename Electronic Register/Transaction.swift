@@ -24,14 +24,7 @@ class Transaction: NSObject, NSCoding {
 	
 	var amountString: String {
 		get {
-			let formatter = NSNumberFormatter()
-			formatter.maximumFractionDigits = 2
-			formatter.numberStyle = .CurrencyStyle
-			if let string = formatter.stringFromNumber(self.amount){
-				return string
-			}else{
-				return "$0.00"
-			}
+			return amount.currencyString
 		}
 	}
 	
@@ -39,6 +32,11 @@ class Transaction: NSObject, NSCoding {
 		var transactions = Transaction.getTransactionsFromUserdefaults()
 		transactions = [self] + transactions
 		Transaction.setTransactionsFromUserDefaults(transactions)
+		Account.balance += self.amount
+		
+		if self.amount > 0 {
+			Account.tithesDue += 0.1 * amount
+		}
 	}
 	
 	override init(){ super.init()}

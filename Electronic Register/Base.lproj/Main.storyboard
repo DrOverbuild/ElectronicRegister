@@ -31,20 +31,20 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NAF-hA-fs5" firstAttribute="top" secondItem="Nfh-m1-IvW" secondAttribute="bottom" id="O54-We-NUD"/>
-                            <constraint firstItem="NAF-hA-fs5" firstAttribute="bottom" secondItem="49a-F1-AVQ" secondAttribute="top" id="Z8a-jx-fJz"/>
-                            <constraint firstAttribute="trailing" secondItem="NAF-hA-fs5" secondAttribute="trailing" id="aie-z3-2Hz"/>
-                            <constraint firstItem="NAF-hA-fs5" firstAttribute="leading" secondItem="bJq-5y-rOS" secondAttribute="leading" id="mZb-CI-jOC"/>
+                            <constraint firstItem="NAF-hA-fs5" firstAttribute="bottom" secondItem="49a-F1-AVQ" secondAttribute="top" id="DgD-x8-kj9"/>
+                            <constraint firstItem="NAF-hA-fs5" firstAttribute="top" secondItem="bJq-5y-rOS" secondAttribute="top" id="Z4h-dR-Wys"/>
+                            <constraint firstItem="NAF-hA-fs5" firstAttribute="leading" secondItem="bJq-5y-rOS" secondAttribute="leading" id="h9X-5q-5cc"/>
+                            <constraint firstAttribute="trailing" secondItem="NAF-hA-fs5" secondAttribute="trailing" id="qap-d9-iP1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="NAF-hA-fs5"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="O54-We-NUD"/>
-                                <exclude reference="Z8a-jx-fJz"/>
-                                <exclude reference="aie-z3-2Hz"/>
-                                <exclude reference="mZb-CI-jOC"/>
+                                <exclude reference="DgD-x8-kj9"/>
+                                <exclude reference="Z4h-dR-Wys"/>
+                                <exclude reference="h9X-5q-5cc"/>
+                                <exclude reference="qap-d9-iP1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -52,10 +52,10 @@
                                 <include reference="NAF-hA-fs5"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="O54-We-NUD"/>
-                                <include reference="Z8a-jx-fJz"/>
-                                <include reference="aie-z3-2Hz"/>
-                                <include reference="mZb-CI-jOC"/>
+                                <include reference="DgD-x8-kj9"/>
+                                <include reference="Z4h-dR-Wys"/>
+                                <include reference="h9X-5q-5cc"/>
+                                <include reference="qap-d9-iP1"/>
                             </mask>
                         </variation>
                     </view>

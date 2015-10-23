@@ -34,13 +34,12 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
 		let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "cell")
 		
 		if cell.textLabel != nil {
-			cell.textLabel!.text = transactions[indexPath.row].amountString
+			cell.textLabel!.text = transactions[indexPath.row].toWhom
 		}
 		
 		if cell.detailTextLabel != nil {
-			cell.detailTextLabel!.text = transactions[indexPath.row].toWhom
+			cell.detailTextLabel!.text = transactions[indexPath.row].amountString + " — " + transactions[indexPath.row].forWhat
 		}
-		print("tableView cell content customized.")
 		
 		return cell
 	}

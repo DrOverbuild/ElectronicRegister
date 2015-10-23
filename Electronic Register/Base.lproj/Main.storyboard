@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0EB-ot-a8F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0EB-ot-a8F">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -404,6 +404,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dp4-Rd-PdO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1Vf-rS-SZW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mp1-Yf-0TW">
@@ -506,6 +507,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="mp1-Yf-0TW" id="wqk-X4-ZRd"/>
+                        <outlet property="forTextField" destination="oWu-ZL-atk" id="lvY-ed-AXG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hO1-4O-Wgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer cancelsTouchesInView="NO" id="66a-1S-5YM">
@@ -559,6 +564,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7em-By-QdQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3ms-sS-vaB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ecj-nw-f98">
@@ -626,15 +632,15 @@
                                 <exclude reference="mvO-Zi-1SU"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Hij-a8-ypy"/>
+                                <exclude reference="hZN-xy-EFJ"/>
+                                <exclude reference="w7Y-MZ-VWs"/>
                                 <exclude reference="TKb-xn-ZuW"/>
                                 <exclude reference="WcI-6M-E6b"/>
                                 <exclude reference="cEy-sI-oIa"/>
                                 <exclude reference="1Ug-8s-Ir2"/>
                                 <exclude reference="TZk-KR-VNn"/>
                                 <exclude reference="aGV-sG-ZiN"/>
-                                <exclude reference="Hij-a8-ypy"/>
-                                <exclude reference="hZN-xy-EFJ"/>
-                                <exclude reference="w7Y-MZ-VWs"/>
                                 <exclude reference="7sM-8L-rjv"/>
                                 <exclude reference="QRn-JK-rTd"/>
                                 <exclude reference="Xrp-hD-Fmj"/>
@@ -648,15 +654,15 @@
                                 <include reference="mvO-Zi-1SU"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Hij-a8-ypy"/>
+                                <include reference="hZN-xy-EFJ"/>
+                                <include reference="w7Y-MZ-VWs"/>
                                 <include reference="TKb-xn-ZuW"/>
                                 <include reference="WcI-6M-E6b"/>
                                 <include reference="cEy-sI-oIa"/>
                                 <include reference="1Ug-8s-Ir2"/>
                                 <include reference="TZk-KR-VNn"/>
                                 <include reference="aGV-sG-ZiN"/>
-                                <include reference="Hij-a8-ypy"/>
-                                <include reference="hZN-xy-EFJ"/>
-                                <include reference="w7Y-MZ-VWs"/>
                                 <include reference="7sM-8L-rjv"/>
                                 <include reference="QRn-JK-rTd"/>
                                 <include reference="Xrp-hD-Fmj"/>

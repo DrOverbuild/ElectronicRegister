@@ -21,6 +21,7 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		// Insert code here when user taps cell.
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+		
 	}
 	
 	

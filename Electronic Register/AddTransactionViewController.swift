@@ -51,6 +51,14 @@ class AddTransactionViewController: UIViewController {
 				}else{
 					errorAlert()
 				}
+			case "Add Tithe":
+				let amount = Double(amountTextField?.text ?? "")
+				if amount != nil {
+					Account.tithesDue -= amount!
+					close()
+				}else{
+					errorAlert()
+				}
 			default:
 			break
 		}

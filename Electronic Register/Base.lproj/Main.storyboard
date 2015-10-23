@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64Z-Fz-lDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-478.5" y="1212"/>
+            <point key="canvasLocation" x="391.5" y="700"/>
         </scene>
         <!--Electronic Register-->
         <scene sceneID="tne-QT-ifu">
@@ -201,6 +201,11 @@
                                         <include reference="qeg-bO-b1m"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="WUp-WM-SLk" kind="popoverPresentation" identifier="add transaction" popoverAnchorView="v8b-NY-nvj" id="Frp-1H-KHK">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBm-fd-kDT">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -399,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268.5" y="470"/>
+            <point key="canvasLocation" x="1138.5" y="-42"/>
         </scene>
         <!--Add Income-->
         <scene sceneID="OK9-fM-pcc">
@@ -528,7 +533,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1647" y="470"/>
+            <point key="canvasLocation" x="2517" y="-42"/>
         </scene>
         <!--OurSVC View Controller-->
         <scene sceneID="DV9-AR-lSw">
@@ -542,7 +547,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZW-xg-mhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-478.5" y="-275"/>
+            <point key="canvasLocation" x="391.5" y="-787"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aeE-qP-6Nb">
@@ -562,7 +567,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcy-aj-ULi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268.5" y="-275"/>
+            <point key="canvasLocation" x="1138.5" y="-787"/>
         </scene>
         <!--Add Expense-->
         <scene sceneID="cfm-Gg-XXv">
@@ -706,7 +711,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1647" y="-275"/>
+            <point key="canvasLocation" x="2517" y="-787"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c7y-av-sUg">
@@ -725,7 +730,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHf-av-POz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-478.5" y="470"/>
+            <point key="canvasLocation" x="391.5" y="-42"/>
         </scene>
         <!--Add Transaction Navigation Controller-->
         <scene sceneID="WBC-gD-mNw">
@@ -749,7 +754,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIA-z4-vjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="-275"/>
+            <point key="canvasLocation" x="1905" y="-787"/>
         </scene>
         <!--Add Transaction Navigation Controller-->
         <scene sceneID="Htq-8H-JVS">
@@ -773,13 +778,141 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j92-t8-6r8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="470"/>
+            <point key="canvasLocation" x="1905" y="-42"/>
+        </scene>
+        <!--Add Tithe-->
+        <scene sceneID="H9b-Cn-uI9">
+            <objects>
+                <viewController id="vZ0-J2-Hgg" customClass="AddTransactionViewController" customModule="Electronic_Register" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Yn-ci-TU8"/>
+                        <viewControllerLayoutGuide type="bottom" id="YVa-9e-bhn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s1h-h2-1WY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9me-E7-tHU">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd0-wC-cMC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wM9-eE-BJ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Add Tithe" backgroundImage="button background">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wM9-eE-BJ4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="wM9-eE-BJ4"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onAddTransaction:" destination="vZ0-J2-Hgg" eventType="touchUpInside" id="Fd9-wV-Bv7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9me-E7-tHU" firstAttribute="trailing" secondItem="s1h-h2-1WY" secondAttribute="trailingMargin" id="Cvm-KV-nlz"/>
+                            <constraint firstItem="9me-E7-tHU" firstAttribute="top" secondItem="1Yn-ci-TU8" secondAttribute="bottom" constant="8" id="F4b-oW-hEx"/>
+                            <constraint firstItem="Cd0-wC-cMC" firstAttribute="trailing" secondItem="s1h-h2-1WY" secondAttribute="trailingMargin" id="Qti-ms-sey"/>
+                            <constraint firstItem="Cd0-wC-cMC" firstAttribute="leading" secondItem="s1h-h2-1WY" secondAttribute="leadingMargin" id="Yh9-3s-b3h"/>
+                            <constraint firstItem="9me-E7-tHU" firstAttribute="leading" secondItem="s1h-h2-1WY" secondAttribute="leadingMargin" id="cOD-YB-WDe"/>
+                            <constraint firstItem="Cd0-wC-cMC" firstAttribute="top" secondItem="9me-E7-tHU" secondAttribute="bottom" constant="8" id="k8A-pF-dai"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9me-E7-tHU"/>
+                                <exclude reference="Cd0-wC-cMC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Cvm-KV-nlz"/>
+                                <exclude reference="F4b-oW-hEx"/>
+                                <exclude reference="cOD-YB-WDe"/>
+                                <exclude reference="Qti-ms-sey"/>
+                                <exclude reference="Yh9-3s-b3h"/>
+                                <exclude reference="k8A-pF-dai"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9me-E7-tHU"/>
+                                <include reference="Cd0-wC-cMC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Cvm-KV-nlz"/>
+                                <include reference="F4b-oW-hEx"/>
+                                <include reference="cOD-YB-WDe"/>
+                                <include reference="Qti-ms-sey"/>
+                                <include reference="Yh9-3s-b3h"/>
+                                <include reference="k8A-pF-dai"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LRj-1Z-Qhu" appends="YES" id="BJ3-xv-YXO"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Tithe" id="oKI-VS-hN5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Dwu-lr-0MJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="vZ0-J2-Hgg" id="jXh-Va-V0e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="9me-E7-tHU" id="hWp-4X-Eny"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9A-aW-Oos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="LRj-1Z-Qhu">
+                    <connections>
+                        <action selector="onTap:" destination="vZ0-J2-Hgg" id="JNj-Cf-6ll"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2517" y="684"/>
+        </scene>
+        <!--Add Transaction Navigation Controller-->
+        <scene sceneID="qpl-O9-v7m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WUp-WM-SLk" customClass="AddTransactionNavigationController" customModule="Electronic_Register" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="l3x-Ve-XFy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vZ0-J2-Hgg" kind="relationship" relationship="rootViewController" id="gZx-3d-ZHi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5d-x0-P3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896" y="684"/>
         </scene>
     </scenes>
     <resources>
         <image name="button background" width="360" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="phk-FL-HRn"/>
+        <segue reference="VM4-7n-JHU"/>
     </inferredMetricsTieBreakers>
 </document>
